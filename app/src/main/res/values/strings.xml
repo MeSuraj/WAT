@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">WAT</string>
+    <string name="nav_header_title">WhatsApp Tools</string>
+    <string name="nav_header_subtitle">thanksforcontactus@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+
+
+<!--    Direct Message -->
+    <string name="phone">Phone Number</string>
+    <string name="username">Enter your user name!</string>
+    <string name="message">Type Your Message</string>
+    <string name="sendBTN">send</string>
+    <string name="contact">open contact</string>
+    <string name="fastMessage">Take Quick Messages</string>
+
+
+</resources>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"/>
+
+    <ImageView
+        android:layout_width="180dp"
+        android:src="@drawable/logo"
+        android:layout_above="@+id/lBottom"
+        android:layout_centerHorizontal="true"
+        android:layout_height="180dp"/>
+
+    <LinearLayout
+        android:id="@+id/lBottom"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/frameBanner"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_gravity="center"
+            android:text="Status"
+            android:textSize="35sp"
+            android:gravity="center"
+            android:fontFamily="@font/bold"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_gravity="center"
+            android:text="Saver"
+            android:textSize="35sp"
+            android:gravity="center"
+            android:fontFamily="@font/bold"
+            android:layout_marginBottom="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:id="@+id/btnWhatsapp"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_height="70dp">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ic_whatsapp" />
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:text="titleWhatsapp"
+                android:fontFamily="@font/medium"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnWhatsBus"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="100dp"
+            android:layout_height="70dp">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ic_whatsapp"
+                android:layout_height="35dp"/>
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:text="WhatsaApp Business"
+                android:fontFamily="@font/medium"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frameBanner"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <include layout="@layout/navigation_fab" />
+
+</RelativeLayout>
