@@ -23,7 +23,7 @@ import com.rilixtech.widget.countrycodepicker.CountryCodePicker;
 
 import learn.zero.say.wat.R;
 
-public class DirectChatActivity extends AppCompatActivity {
+public class DirectMessage extends AppCompatActivity {
 
     private static final String FILE_NAME = "WhatsApp_file" ;
     private static final String NAME_KEY = "UserName_key";
@@ -39,7 +39,7 @@ public class DirectChatActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.direct_msg_activity_main);
+        setContentView(R.layout.direct_massage);
 
         //To hide action Bar(Tool Bar)
         getSupportActionBar().hide();
@@ -84,7 +84,7 @@ public class DirectChatActivity extends AppCompatActivity {
 
         // load the dialog_promt_user.xml layout and inflate to view
         LayoutInflater layoutinflater = LayoutInflater.from(context);
-        View promptUserView = layoutinflater.inflate(R.layout.direct_msg_dialog, null);
+        View promptUserView = layoutinflater.inflate(R.layout.direct_massage_dialog, null);
 
         MaterialAlertDialogBuilder alertDialogBuilder = new MaterialAlertDialogBuilder(context);
         alertDialogBuilder.setIcon(R.drawable.ic_person);

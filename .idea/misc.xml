@@ -68,6 +68,8 @@
         <entry key="app/src/main/res/drawable/rectangle.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/rectangle_rounded.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_direct_dialog.xml" value="0.18802083333333333" />
+        <entry key="app/src/main/res/layout/activity_direct_msg.xml" value="0.18802083333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18802083333333333" />
         <entry key="app/src/main/res/layout/activity_main_chat_direct.xml" value="0.18802083333333333" />
         <entry key="app/src/main/res/layout/activity_setting.xml" value="0.18802083333333333" />

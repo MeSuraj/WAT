@@ -21,7 +21,7 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
-import learn.zero.say.wat.Activity.DirectChatActivity;
+import learn.zero.say.wat.Activity.DirectMessage;
 import learn.zero.say.wat.Activity.PrivacyPolicy;
 import learn.zero.say.wat.Activity.WhatsAppWeb;
 import learn.zero.say.wat.databinding.ActivityMainBinding;
@@ -190,7 +190,7 @@ public class MainActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.recoverDeleted: Toast.makeText(this, "Code", Toast.LENGTH_SHORT).show();
             break;
-            case R.id.directChat: startActivity(new Intent(getApplicationContext(), DirectChatActivity.class));
+            case R.id.directChat: startActivity(new Intent(getApplicationContext(), DirectMessage.class));
             break;
             case R.id.whatsappWeb: startActivity(new Intent(getApplicationContext(), WhatsAppWeb.class));
             break;

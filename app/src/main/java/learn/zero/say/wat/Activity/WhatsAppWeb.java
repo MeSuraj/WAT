@@ -34,7 +34,6 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.Map;
 
-import learn.zero.say.wat.MainActivity;
 import learn.zero.say.wat.R;
 
 
@@ -51,7 +50,7 @@ public class WhatsAppWeb extends AppCompatActivity {
     public void onCreate(Bundle bundle) {
 //        Utils.loadLocale(this);
         super.onCreate(bundle);
-        setContentView(R.layout.activity_whatsapp_web);
+        setContentView(R.layout.whatsapp_web);
 
 
         //To hide action Bar(Tool Bar)

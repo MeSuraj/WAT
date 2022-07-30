@@ -31,7 +31,7 @@
         </activity>
 
         <activity android:name="learn.zero.say.wat.Activity.PrivacyPolicy" />
-        <activity android:name="learn.zero.say.wat.Activity.DirectChatActivity"/>
+        <activity android:name="learn.zero.say.wat.Activity.DirectMessage"/>
         <activity android:name="learn.zero.say.wat.Activity.WhatsAppWeb"/>
 
 
