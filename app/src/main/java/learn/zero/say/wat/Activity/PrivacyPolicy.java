@@ -17,8 +17,6 @@ public class PrivacyPolicy extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_privacy_policy);
 
-        //To hide action Bar(Tool Bar)
-        getSupportActionBar().hide();
 
         WebView view =(WebView)findViewById(R.id.webview);
         WebSettings settings = view.getSettings();

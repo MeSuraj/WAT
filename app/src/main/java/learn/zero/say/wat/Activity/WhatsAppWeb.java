@@ -53,8 +53,6 @@ public class WhatsAppWeb extends AppCompatActivity {
         setContentView(R.layout.whatsapp_web);
 
 
-        //To hide action Bar(Tool Bar)
-        getSupportActionBar().hide();
 
         getWindow().getDecorView().setSystemUiVisibility(InputDeviceCompat.SOURCE_TOUCHSCREEN);
 

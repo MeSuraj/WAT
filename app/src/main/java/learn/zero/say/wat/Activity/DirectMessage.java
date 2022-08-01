@@ -41,8 +41,7 @@ public class DirectMessage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.direct_massage);
 
-        //To hide action Bar(Tool Bar)
-        getSupportActionBar().hide();
+
 
         ccp =findViewById(R.id.countryCode);
         userPhoneNumber = findViewById(R.id.phone_number_edt);
