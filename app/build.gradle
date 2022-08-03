@@ -48,5 +48,8 @@ dependencies {
     implementation 'com.hbb20:ccp:2.4.7'
     implementation 'com.google.android.material:material:1.7.0-alpha03'
 
+    //QR Generate
+    implementation 'com.google.zxing:core:3.4.1'
+
 
 }

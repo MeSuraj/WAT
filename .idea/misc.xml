@@ -19,6 +19,7 @@
         <entry key="app/src/main/res/drawable-v24/ic_filter.xml" value="0.1" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="app/src/main/res/drawable-v24/ic_night_mode.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable-v24/ic_qr_code.xml" value="0.1115" />
         <entry key="app/src/main/res/drawable-v24/ic_search.xml" value="0.1" />
         <entry key="app/src/main/res/drawable-v24/ic_send.xml" value="0.1115" />
         <entry key="app/src/main/res/drawable-v24/ic_send_black_24dp.xml" value="0.112" />
@@ -69,6 +70,7 @@
         <entry key="app/src/main/res/drawable/rectangle_rounded.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_direct_dialog.xml" value="0.18802083333333333" />
+        <entry key="app/src/main/res/layout/activity_direct_massage.xml" value="0.18802083333333333" />
         <entry key="app/src/main/res/layout/activity_direct_msg.xml" value="0.18802083333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18802083333333333" />
         <entry key="app/src/main/res/layout/activity_main_chat_direct.xml" value="0.18802083333333333" />

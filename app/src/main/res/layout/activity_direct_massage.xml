@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/direct_message"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activity.DirectMessage">
@@ -19,42 +21,62 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                tools:context=".QRGenerateActivity">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/rectangle"
+                    android:layout_margin="15dp">
+
+                    <ImageView
+                        android:id="@+id/qrImageView"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:padding="10dp"
+                        android:background="@drawable/ic_qr_code"
+                        android:contentDescription="todo" />
+
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
 
             <LinearLayout
-                android:background="@drawable/rectangle"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_gravity="center"
-                android:gravity="center"
+                android:layout_height="70dp"
                 android:orientation="horizontal"
-                android:padding="5dp"
-                android:layout_margin="15dp"
-                android:weightSum="100">
+                android:background="@drawable/rectangle"
+                android:layout_margin="15dp">
 
                 <com.rilixtech.widget.countrycodepicker.CountryCodePicker
                     android:id="@+id/countryCode"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="40"
-                    android:padding="5dp"
-                    app:ccp_textColor="@color/teal_200"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    app:ccp_textColor="@color/material_dynamic_neutral60"
                     app:ccp_countryPreference="IN"
                     app:ccp_defaultNameCode="IN"
+                    app:ccp_textSize="22dp"
                     app:ccp_enablePhoneAutoFormatter="false" />
 
                 <EditText
                     android:id="@+id/phone_number_edt"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_weight="60"
+                    android:layout_marginEnd="10dp"
                     android:fontFamily="@font/normal"
                     android:hint="@string/phone"
                     android:importantForAutofill="no"
                     android:inputType="phone"
-                    android:maxLength="10"
-                    android:padding="5dp"/>
+                    android:textSize="22dp"
+                    android:maxLength="10"/>
 
             </LinearLayout>
 
@@ -63,7 +85,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
-                android:layout_marginBottom="15dp"
                 android:background="@drawable/rectangle"
                 android:orientation="horizontal">
 
@@ -95,6 +116,7 @@
                     android:layout_marginBottom="15dp"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
+                    android:rotation="325"
                     android:padding="10dp"
                     android:layout_gravity="bottom"/>
 
@@ -106,22 +128,25 @@
                     android:padding="20dp"
                     android:layout_margin="5dp"
                     android:fontFamily="@font/bold"
+                    android:backgroundTint="@color/green"
                     android:background="@drawable/ic_send"/>
 
             </LinearLayout>
+
+
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginBottom="15dp">
+                android:layout_marginEnd="15dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -187,6 +212,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:orientation="vertical"
                         android:gravity="center"
                         android:layout_margin="15dp">
 
@@ -201,14 +227,31 @@
                             android:textAllCaps="false"
                             android:layout_gravity="center"
                             android:layout_margin="2dp"/>
+
+
                     </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/medium"
+                        android:background="@drawable/rectangle"
+                        android:padding="10dp"
+                        android:textSize="16dp"
+                        android:id="@+id/generateQrBtn"
+                        android:onClick="QRCodeButton"
+                        android:text="@string/generate_qr_code"
+                        android:textAllCaps="false"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="20dp"/>
+
                 </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
 
-
         </LinearLayout>
     </ScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
 
+</androidx.constraintlayout.widget.ConstraintLayout>

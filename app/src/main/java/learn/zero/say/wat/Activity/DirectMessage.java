@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -11,6 +13,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,11 +22,17 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.common.BitMatrix;
+import com.google.zxing.qrcode.QRCodeWriter;
 import com.rilixtech.widget.countrycodepicker.CountryCodePicker;
 
 import learn.zero.say.wat.R;
 
 public class DirectMessage extends AppCompatActivity {
+
+    //QRCode
+    private ImageView qrView;
 
     private static final String FILE_NAME = "WhatsApp_file" ;
     private static final String NAME_KEY = "UserName_key";
@@ -39,9 +48,10 @@ public class DirectMessage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.direct_massage);
+        setContentView(R.layout.activity_direct_massage);
 
-
+        //QRCode
+        qrView = findViewById(R.id.qrImageView);
 
         ccp =findViewById(R.id.countryCode);
         userPhoneNumber = findViewById(R.id.phone_number_edt);
@@ -51,6 +61,8 @@ public class DirectMessage extends AppCompatActivity {
         checkAlertBox();
     }
 
+
+    //Direct Message
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode,
@@ -83,7 +95,7 @@ public class DirectMessage extends AppCompatActivity {
 
         // load the dialog_promt_user.xml layout and inflate to view
         LayoutInflater layoutinflater = LayoutInflater.from(context);
-        View promptUserView = layoutinflater.inflate(R.layout.direct_massage_dialog, null);
+        View promptUserView = layoutinflater.inflate(R.layout.activity_direct_massage_dialog, null);
 
         MaterialAlertDialogBuilder alertDialogBuilder = new MaterialAlertDialogBuilder(context);
         alertDialogBuilder.setIcon(R.drawable.ic_person);
@@ -150,7 +162,7 @@ public class DirectMessage extends AppCompatActivity {
             startActivity(new Intent(Intent.ACTION_VIEW,
                     Uri.parse(
                             "https://api.whatsapp.com/send?phone=" + ccp.getFullNumberWithPlus()
-                                    + "&text=" + "Hello! I'm " + yourName+ "."
+                                    + "&text=" + "Hello! I'm " + yourName+ " "
                     )));
         }
 
@@ -236,5 +248,30 @@ public class DirectMessage extends AppCompatActivity {
                                     "&text=" + messageText
                     )));
         }
+    }
+
+    //QRCode
+    public void QRCodeButton(View view){
+        QRCodeWriter qrCodeWriter = new QRCodeWriter();
+//        String messageText = message.getText().toString();
+
+        if(TextUtils.isEmpty(userPhoneNumber.getText().toString())){
+            Toast.makeText(context, "Enter Phone Number", Toast.LENGTH_SHORT).show();
+        }else
+            try {
+                BitMatrix bitMatrix = qrCodeWriter.encode("https://api.whatsapp.com/send?phone="
+                                + ccp.getFullNumberWithPlus() + userPhoneNumber.getText().toString(),
+//                            +"&text="  + messageText,
+                        BarcodeFormat.QR_CODE, 200, 200);
+                Bitmap bitmap = Bitmap.createBitmap(200, 200, Bitmap.Config.RGB_565);
+                for (int x = 0; x<200; x++){
+                    for (int y=0; y<200; y++){
+                        bitmap.setPixel(x,y,bitMatrix.get(x,y)? Color.BLACK : Color.WHITE);
+                    }
+                }
+                qrView.setImageBitmap(bitmap);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
     }
 }

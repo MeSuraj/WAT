@@ -50,7 +50,7 @@ public class WhatsAppWeb extends AppCompatActivity {
     public void onCreate(Bundle bundle) {
 //        Utils.loadLocale(this);
         super.onCreate(bundle);
-        setContentView(R.layout.whatsapp_web);
+        setContentView(R.layout.activity_whatsapp_web);
 
 
 

@@ -17,6 +17,8 @@
     <string name="sendBTN">send</string>
     <string name="contact">open contact</string>
     <string name="fastMessage">Take Quick Messages</string>
+    <string name="generate_qr_code">Generate WhatsApp QR Code</string>
+
 
 
 </resources>
