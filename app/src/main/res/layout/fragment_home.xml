@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.home.HomeFragment">
 
     <ImageView
@@ -26,17 +26,18 @@
         android:layout_gravity="center"
         android:fontFamily="@font/bold"
         android:gravity="center"
-        android:text="Status"
+        android:text="WhatsApp"
         android:textSize="35sp" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/logoText2"
         android:layout_above="@+id/lBottom"
+        android:layout_marginBottom="150dp"
         android:layout_gravity="center"
         android:fontFamily="@font/bold"
         android:gravity="center"
-        android:text="Saver"
+        android:text="Tools"
         android:textSize="35sp" />
 
 
@@ -53,25 +54,26 @@
 
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/btnWhatsapp"
+            android:id="@+id/directChat"
             android:layout_width="match_parent"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:layout_height="70dp">
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="70dp"
+            android:onClick="onClick">
 
             <ImageView
                 android:layout_width="35dp"
                 android:layout_height="32dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="20dp"
-                android:src="@drawable/ic_whatsapp" />
+                app:srcCompat="@drawable/ic_chat" />
 
             <TextView
                 android:layout_gravity="center"
                 android:layout_marginLeft="15dp"
-                android:text="WhatsaApp"
+                android:text="WhatsApp Chat"
                 android:fontFamily="@font/medium"
                 android:textSize="18sp"
                 android:layout_width="wrap_content"
@@ -80,25 +82,26 @@
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/btnWhatsBus"
+            android:id="@+id/whatsappWeb"
             android:layout_width="match_parent"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="100dp"
-            android:layout_height="70dp">
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="50dp"
+            android:layout_height="70dp"
+            android:onClick="onClick">
 
             <ImageView
                 android:layout_width="35dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="20dp"
-                android:src="@drawable/ic_whatsapp"
+                app:srcCompat="@drawable/ic_web"
                 android:layout_height="35dp"/>
 
             <TextView
                 android:layout_gravity="center"
                 android:layout_marginLeft="15dp"
-                android:text="WhatsaApp Business"
+                android:text="WhatsaApp Web"
                 android:fontFamily="@font/medium"
                 android:textSize="18sp"
                 android:layout_width="wrap_content"
@@ -112,6 +115,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <include layout="@layout/navigation_fab" />
+<!--    <include layout="@layout/navigation_fab" />-->
 
 </RelativeLayout>
