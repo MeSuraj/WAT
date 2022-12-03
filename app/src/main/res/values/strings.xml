@@ -1,12 +1,12 @@
 <resources>
     <string name="app_name">WAT</string>
     <string name="nav_header_title">WhatsApp Tools</string>
-    <string name="nav_header_subtitle">thanksforcontactus@gmail.com</string>
+    <string name="nav_header_subtitle">https://github.com/MeSuraj</string>
     <string name="nav_header_desc">Navigation header</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_gallery">WhatsApp</string>
+    <string name="menu_slideshow">WhatsApp Business</string>
 
 
 
